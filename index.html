@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" style="background-color: #111">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="data:null" />
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="description" content="KVM" />
+		<meta name="theme-color" content="#000000" />
+		<title>KVM</title>
+		<link rel="stylesheet" href="./src/style.css" />
+	</head>
+	<body>
+		<input
+			id="kb"
+			autocorrect="off"
+			autocomplete="off"
+			autocapitalize="off"
+			spellcheck="false"
+		/>
+		<div id="toolbar">
+			<span id="status"></span>
+			<span class="spacer"></span>
+			<button id="kb-btn" commandfor="kb" command="--f">⌨</button>
+		</div>
+		<div id="keys">
+			<button commandfor="kb" command="--k" data-key="ControlLeft">Ctrl</button>
+			<button commandfor="kb" command="--k" data-key="AltLeft">Alt</button>
+			<button commandfor="kb" command="--k" data-key="ShiftLeft">Shift</button>
+			<button commandfor="kb" command="--k" data-key="MetaLeft">⊞</button>
+			<div class="sep"></div>
+			<button commandfor="kb" command="--k" data-key="Escape">Esc</button>
+			<button commandfor="kb" command="--k" data-key="Tab">Tab</button>
+			<button commandfor="kb" command="--k" data-key="ArrowUp">↑</button>
+			<button commandfor="kb" command="--k" data-key="ArrowDown">↓</button>
+			<button commandfor="kb" command="--k" data-key="ArrowLeft">←</button>
+			<button commandfor="kb" command="--k" data-key="ArrowRight">→</button>
+			<button commandfor="kb" command="--k" data-key="Delete">Del</button>
+		</div>
+		<div class="view">
+			<canvas></canvas>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>
